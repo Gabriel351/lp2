@@ -1,6 +1,16 @@
 public class Ponto{
 	private	 double x,y;
 
+	public Ponto() {
+		System.out.println("Construtor 1 - " + this);
+	}
+
+	public Ponto(double x, double y) {
+		System.out.println("Construtor 2");
+		this.x = x;
+		this.y = y;
+	}
+
 	public void setX(double x){
 		this.x = x;
 	}
@@ -28,8 +38,8 @@ public class Ponto{
 		Ponto p3 = new Ponto();
 		p3.setX(50.0);
 		p3.setY(70.0);
+		Ponto p4 = new Ponto(4.00,10.00);
 		p3 = p1;
-		Ponto p4 = p1;
 		System.out.println(p3.getX() + " " + p3.getY());
 		System.out.println(p2.getX() + " " + p2.getY());
 		System.out.println(p1.getX() + " " + p1.getY());
@@ -39,5 +49,16 @@ public class Ponto{
 		soma = (Math.pow(px,2) + Math.pow(py,2));
 		distancia = Math.sqrt(soma);
 		System.out.println(distancia);
+
+		Reta r1 = new Reta();
+		r1.setP1(p1);
+		r1.setP2(p2);
+		r1.getP1().getX();
+		r1.getP2().getY();
+		p1.setX(30);
+		r1.getP2().setY(40);
+		System.out.println("Pontos da reta r1: ");
+		System.out.println("P1: " + r1.getP1().getX() + " " + r1.getP1().getY());
+		System.out.println("P2: " + r1.getP2().getX() + " " + r1.getP2().getY());
 	}
 }
