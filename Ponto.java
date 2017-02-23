@@ -55,10 +55,11 @@ public class Ponto{
 		r1.setP2(p2);
 		r1.getP1().getX();
 		r1.getP2().getY();
-		p1.setX(30);
-		r1.getP2().setY(40);
+		//p1.setX(30);
+		//r1.getP2().setY(40);
 		System.out.println("Pontos da reta r1: ");
 		System.out.println("P1: " + r1.getP1().getX() + " " + r1.getP1().getY());
 		System.out.println("P2: " + r1.getP2().getX() + " " + r1.getP2().getY());
+		System.out.println(r1.Area(r1.getP1().getX(),r1.getP1().getY(),r1.getP2().getX(),r1.getP2().getY()));
 	}
 }
