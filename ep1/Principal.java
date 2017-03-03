@@ -19,11 +19,18 @@ public class Principal {
                 } else {
                         System.out.println("este numero nao esta na lista");
                	}
-		if (teste.Pesquisar(12)) {
+		if (teste.Pesquisar(5)) {
+                        System.out.println("este numero esta na lista");
+                } else {
+                        System.out.println("este numero nao esta na lista");
+                }
+		teste.Remover();
+		 if (teste.Pesquisar(5)) {
                         System.out.println("este numero esta na lista");
                 } else {
                         System.out.println("este numero nao esta na lista");
                 }
 
 	}
+
 }
