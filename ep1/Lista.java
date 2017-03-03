@@ -35,7 +35,7 @@ public class Lista{
 		this.cabeca=null;
 	}
 
-	public boolean pesquisar(int item){
+	public boolean Pesquisar(int item){
 		No cursor= this.cabeca;
 		for(int i=0;i<tam;i++){
 			if(cursor.getX()==item){
