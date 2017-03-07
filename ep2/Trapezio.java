@@ -1,16 +1,15 @@
 public class Trapezio extends FigurasGeometricas {
-        private double bmaior,bmenor,altura;
-        public Trapezio(double bmaior,double bmenor, double altura) {
+        private double bmaior,bmenor,altura,l1,l2;
+        public Trapezio(double bmaior,double bmenor, double altura,double l1,double l2) {
                 this.bmaior = bmaior;
 				this.bmenor = bmenor;
 				this.altura = altura;
+                this.l1 = l1;
+                this.l2 = l2;
         }
         public double perimetro() {
-                double p,cateto,diagonal,alt;
-                cateto = Math.pow(((this.bmaior - this.bmenor) / 2),2);
-				alt = Math.pow(this.altura,2);
-				diagonal = Math.sqrt(cateto + alt);
-				p = diagonal*2 + this.bmaior + this.bmenor;
+                double p;
+                p = this.bmenor + this.bmaior + this.l1 + this.l2;
                 return p;
         }
         public double area() {

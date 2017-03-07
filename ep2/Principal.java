@@ -1,6 +1,6 @@
 public class Principal {
 	public static void main (String arg[]) {
-		Trapezio t = new Trapezio(10,5,5);
+		Trapezio t = new Trapezio(16,10,5,4,4);
 		Circunferencia c = new Circunferencia();
 		c.setR(10);
 		Quadrado q = new Quadrado();
