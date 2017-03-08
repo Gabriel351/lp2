@@ -1,6 +1,6 @@
 import java.util.Collections;
 import java.util.ArrayList;
-import java.util.Comparator;
+
 public class Principal {
 	public static void main(String arg[]) {
 		ArrayList<Aluno>alunos = new ArrayList<Aluno>(); 
@@ -10,23 +10,23 @@ public class Principal {
 		Aluno aluno4 = new Aluno();
 		Aluno aluno5 = new Aluno();
 		alunos.add(0,aluno1);
-		alunos.add(1,aluno1);
-		alunos.add(2,aluno1);
-		alunos.add(3,aluno1);
-		alunos.add(4,aluno1);
+		alunos.add(1,aluno2);
+		alunos.add(2,aluno3);
+		alunos.add(3,aluno4);
+		alunos.add(4,aluno5);
 		aluno1.setNome("Gabriel");
 		aluno1.setIdade(17);
-		aluno1.setNome("Luiz");
-		aluno1.setIdade(30);
-		aluno1.setNome("Agnaldo");
-		aluno1.setIdade(2);
-		aluno1.setNome("Maria");
-		aluno1.setIdade(5);
-		aluno1.setNome("João");
-		aluno1.setIdade(10);
+		aluno2.setNome("Luiz");
+		aluno2.setIdade(30);
+		aluno3.setNome("Agnaldo");
+		aluno3.setIdade(2);
+		aluno4.setNome("Maria");
+		aluno4.setIdade(5);
+		aluno5.setNome("João");
+		aluno5.setIdade(10);
 		Collections.sort(alunos);
 		for (int i = 0; i < alunos.size(); i++) {
-			System.out.println(Aluno.get(i).getNome());
+			System.out.println("Nome:" + alunos.get(i).getNome() + "      Idade:" + alunos.get(i).getIdade());
 		}
 	}	
 }
