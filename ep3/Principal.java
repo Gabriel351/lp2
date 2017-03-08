@@ -26,6 +26,7 @@ public class Principal {
 		aluno1.setIdade(10);
 		Collections.sort(alunos);
 		for (int i = 0; i < alunos.size(); i++) {
-			System.out.println(alunos);
+			System.out.println(Aluno.get(i).getNome());
 		}
+	}	
 }
