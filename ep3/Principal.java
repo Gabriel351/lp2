@@ -16,7 +16,7 @@ public class Principal {
 		alunos.add(4,aluno5);
 		aluno1.setNome("Gabriel");
 		aluno1.setIdade(17);
-		aluno2.setNome("Luiz");
+		aluno2.setNome("Adriene");
 		aluno2.setIdade(30);
 		aluno3.setNome("Agnaldo");
 		aluno3.setIdade(2);
@@ -28,5 +28,21 @@ public class Principal {
 		for (int i = 0; i < alunos.size(); i++) {
 			System.out.println("Nome:" + alunos.get(i).getNome() + "      Idade:" + alunos.get(i).getIdade());
 		}
+		ArrayList<Nota>notas = new ArrayList<Nota>();
+		Disciplina lp2 = new Disciplina("lp2","Herbert");
+		Disciplina web = new Disciplina("web","Marcelo");
+		double valor = 0;
+		for (int i = 0; i < 5; i++) {
+			notas.add(new Nota(valor, alunos.get(i), lp2));
+			valor++;
+		}
+		for (int i = 0; i < 5; i++) {
+			notas.add(new Nota(valor, alunos.get(i), web));
+			valor++;
+		}
+		Collections.sort(notas);
+		System.out.println("Maior nota - Nome:" + notas.get(9/2).getAluno().getNome() + " Nota:" + notas.get(9/2).getValor() + " Disciplina:" + notas.get(9/2).getDisciplina().getNome());
+		System.out.println("Maior nota - Nome:" + notas.get(9).getAluno().getNome() + " Nota:" + notas.get(9).getValor() + " Disciplina:" + notas.get(9).getDisciplina().getNome());
+		System.out.println("Maior nota de LP2 - Nome:" + notas.get(9/2).getAluno().getNome() + " Nota:" + notas.get(9/2).getValor());
 	}	
 }
