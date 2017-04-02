@@ -9,10 +9,10 @@ public class Principal {
 		r.setBase(15);
 		r.setAltura(8);
 		Triangulo tr = new Triangulo(10,15,10,8,8);
-		System.out.println("Trapezio area e perimetro:" + t.area() + " " + t.perimetro());
-		System.out.println("Circunferencia area e perimetro:" + c.area() + " " + c.perimetro());
-		System.out.println("Quadrado area e perimetro:" + q.area() + " " + q.perimetro());
-  		System.out.println("Retangulo area e perimetro:" + r.area() + " " + r.perimetro());
-	  	System.out.println("Triangulo area e perimetro:" + tr.area() + " " + tr.perimetro());
+		System.out.println("Trapezio area e perimetro:" + t.calcularArea() + " " + t.calcularPerimetro());
+		System.out.println("Circunferencia area e perimetro:" + c.calcularArea() + " " + c.calcularPerimetro());
+		System.out.println("Quadrado area e perimetro:" + q.calcularArea() + " " + q.calcularPerimetro());
+  		System.out.println("Retangulo area e perimetro:" + r.calcularArea() + " " + r.calcularPerimetro());
+	  	System.out.println("Triangulo area e perimetro:" + tr.calcularArea() + " " + tr.calcularPerimetro());
 	}
 }

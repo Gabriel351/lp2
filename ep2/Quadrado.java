@@ -6,12 +6,12 @@ public class Quadrado extends FigurasGeometricas {
 	public void setLado(double lado) {
 		this.lado = lado;
 	}
-	public double perimetro() {
+	public double calcularPerimetro() {
 		double p;
 		p = this.lado * 4;
 		return p;
 	}
-	public double area() {
+	public double calcularArea() {
 		double a;
 		a = lado * lado;
 		return a;

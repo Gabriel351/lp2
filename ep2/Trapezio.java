@@ -7,12 +7,12 @@ public class Trapezio extends FigurasGeometricas {
                 this.l1 = l1;
                 this.l2 = l2;
         }
-        public double perimetro() {
+        public double calcularPerimetro() {
                 double p;
                 p = this.bmenor + this.bmaior + this.l1 + this.l2;
                 return p;
         }
-        public double area() {
+        public double calcularArea() {
                 double a;
                 a = ((this.bmaior + this.bmenor) * 2) / altura;
                 return a;

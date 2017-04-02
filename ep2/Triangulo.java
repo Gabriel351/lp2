@@ -7,12 +7,12 @@ public class Triangulo extends FigurasGeometricas {
 		this.l2 = l2;
 		this.l3 = l3;
 	}
-	public double perimetro() {
+	public double calcularPerimetro() {
 		double p;
 		p = this.l1+this.l2+this.l3;
 		return p;
 	}
-	public double area() {
+	public double calcularArea() {
 		double a;
 		a = (base * altura)/ 2;
 		return a;

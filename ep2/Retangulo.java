@@ -10,12 +10,12 @@ public class Retangulo extends FigurasGeometricas {
 	public void setAltura(double altura) {
 		this.altura = altura;
 	}
-        public double perimetro() {
+        public double calcularPerimetro() {
                 double p;
                 p = (this.altura * 2)+(this.base *2);
                 return p;
         }
-        public double area() {
+        public double calcularArea() {
                 double a;
                 a = base * altura;
                 return a;

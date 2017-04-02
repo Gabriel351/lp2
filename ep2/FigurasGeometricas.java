@@ -1,6 +1,8 @@
 public class FigurasGeometricas {
-	public void calcularPerimetro() {
+	public double calcularPerimetro() {
+        return 0;
 	}
-	public void calcularArea() {
+	public double calcularArea() {
+        return 0;
 	}
 }
