@@ -40,9 +40,27 @@ public class Principal {
 			notas.add(new Nota(valor, alunos.get(i), web));
 			valor++;
 		}
-		Collections.sort(notas);
-		System.out.println("Maior nota - Nome:" + notas.get(9/2).getAluno().getNome() + " Nota:" + notas.get(9/2).getValor() + " Disciplina:" + notas.get(9/2).getDisciplina().getNome());
+        double maiorweb = 0, maiorlp2 = 0;
+        int pweb = 0, plp2 = 0;
+		for (int i = 0; i < 10; i++) {
+           if (notas.get(i).getDisciplina().getNome() == "web") {
+             if (notas.get(i).getValor() > maiorweb) {
+                maiorweb = notas.get(i).getValor();
+                pweb = i;
+             }            
+           }else {
+                if (notas.get(i).getValor() > maiorlp2) {
+                   maiorlp2 = notas.get(i).getValor();
+                   plp2 = i;    
+             }    
+           }
+        }
+		/*System.out.println("Maior nota - Nome:" + notas.get(9/2).getAluno().getNome() + " Nota:" + notas.get(9/2).getValor() + " Disciplina:" + notas.get(9/2).getDisciplina().getNome());
 		System.out.println("Maior nota - Nome:" + notas.get(9).getAluno().getNome() + " Nota:" + notas.get(9).getValor() + " Disciplina:" + notas.get(9).getDisciplina().getNome());
 		System.out.println("Maior nota de LP2 - Nome:" + notas.get(9/2).getAluno().getNome() + " Nota:" + notas.get(9/2).getValor());
+	}*/
+    System.out.println("Maior nota - Nome:" + notas.get(plp2).getAluno().getNome() + " Nota:" + notas.get(plp2).getValor() + " Disciplina:" + notas.get(plp2).getDisciplina().getNome());
+		System.out.println("Maior nota - Nome:" + notas.get(pweb).getAluno().getNome() + " Nota:" + notas.get(pweb).getValor() + " Disciplina:" + notas.get(pweb).getDisciplina().getNome());
+		System.out.println("Maior nota de LP2 - Nome:" + notas.get(plp2).getAluno().getNome() + " Nota:" + notas.get(plp2).getValor());
 	}	
 }
