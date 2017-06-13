@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txt1 = (TextView) findViewById(R.id.inputNumber);
         TextView txt2 = (TextView) findViewById(R.id.outputStack);
         if (txt1.getText().toString().compareTo("") != 0) {
-            int number = Integer.parseInt(txt1.getText().toString());
+            double number = Double.parseDouble(txt1.getText().toString());
             pilha.push(number);
             txt2.setText(pilha.toString());
             txt1.setText("");
@@ -30,9 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void soma(View v) {
         if (tam > 1) {
-            int var1 = (int) pilha.pop();
-            int var2 = (int) pilha.pop();
-            int var3 = var1 + var2;
+            double var1 = (double) pilha.pop();
+            double var2 = (double) pilha.pop();
+            double var3 = var1 + var2;
             pilha.push(var3);
             TextView txt2 = (TextView) findViewById(R.id.outputStack);
             txt2.setText(pilha.toString());
@@ -42,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void subtracao(View v) {
         if (tam > 1) {
-            int var1 = (int) pilha.pop();
-            int var2 = (int) pilha.pop();
-            int var3 = var1 - var2;
+            double var1 = (double) pilha.pop();
+            double var2 = (double) pilha.pop();
+            double var3 = var1 - var2;
             pilha.push(var3);
             TextView txt2 = (TextView) findViewById(R.id.outputStack);
             txt2.setText(pilha.toString());
@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void multiplicacao(View v) {
         if (tam > 1) {
-            int var1 = (int) pilha.pop();
-            int var2 = (int) pilha.pop();
-            int var3 = var1 * var2;
+            double var1 = (double) pilha.pop();
+            double var2 = (double) pilha.pop();
+            double var3 = var1 * var2;
             pilha.push(var3);
             TextView txt2 = (TextView) findViewById(R.id.outputStack);
             txt2.setText(pilha.toString());
@@ -66,13 +66,18 @@ public class MainActivity extends AppCompatActivity {
 
     public void divisao(View v) {
         if (tam > 1) {
-            int var1 = (int) pilha.pop();
-            int var2 = (int) pilha.pop();
-            int var3 = var1 / var2;
-            pilha.push(var3);
-            TextView txt2 = (TextView) findViewById(R.id.outputStack);
-            txt2.setText(pilha.toString());
-            tam--;
+            double var1 = (double) pilha.pop();
+            double var2 = (double) pilha.pop();
+            if (var2 != 0) {
+                double var3 = var1 / var2;
+                pilha.push(var3);
+                TextView txt2 = (TextView) findViewById(R.id.outputStack);
+                txt2.setText(pilha.toString());
+                tam--;
+            }else {
+                pilha.push(var2);
+                pilha.push(var1);
+            }
         }
     }
 
@@ -90,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
             pilha.removeAllElements();
             TextView txt2 = (TextView) findViewById(R.id.outputStack);
             txt2.setText(pilha.toString());
+            tam = 0;
         }
     }
 }
